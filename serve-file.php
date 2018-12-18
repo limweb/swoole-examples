@@ -6,7 +6,9 @@ use Swoole\Http\Response;
 
 $host = '0.0.0.0';
 $hostname = getenv('HOSTNAME');
-$port = getenv('PORT');
+//$port = getenv('PORT');
+$port = 80;
+
 
 $server = new Server($host, $port);
 
