@@ -12,6 +12,7 @@ $messages->create();
 $host = '0.0.0.0';
 $hostname = getenv('HOSTNAME');
 $port = getenv('PORT');
+$port = 84;
 
 $server = new Server($host, $port);
 
