@@ -8,8 +8,8 @@ use Swoole\Table;
 
 $host = '0.0.0.0';
 $hostname = getenv('HOSTNAME');
-$port = getenv('PORT');
-
+//$port = getenv('PORT');
+$port = 82;
 // Table is a shared memory table that can be used across connections
 $messages = new Table(1024);
 // we need to set the types that the table columns support - just like a RDB
