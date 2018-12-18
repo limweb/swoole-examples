@@ -75,8 +75,8 @@ function handleRequest($dispatcher, string $request_method, string $request_uri)
 
 $host = '0.0.0.0';
 $hostname = getenv('HOSTNAME');
-$port = getenv('PORT');
-
+//$port = getenv('PORT');
+$port = 83;
 $server = new Server($host, $port);
 
 // a swoole server is evented just like express
