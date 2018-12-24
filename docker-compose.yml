@@ -7,7 +7,7 @@ services:
       - DOCKER=1
       - HOSTNAME=docker.local
       - PORT=80
-    command: php /workdir/serve-file.php start
+    # command: php /workdir/serve-file.php start
     # command: php /workdir/client.php start
     # command: php /workdir/channel.php start
     # command: php /workdir/process.php start
@@ -15,7 +15,12 @@ services:
     # command: php /workdir/websocket.php start
     # command: php /workdir/slim.php start
     # command: php /workdir/event-source.php start
+    command: bash -c "php /workdir/serve-file.php start && php /workdir/client.php start && php /workdir/channel.php start && php /workdir/process.php start && php /workdir/router.php start && php /workdir/websocket.php start && php /workdir/slim.php start && php /workdir/event-source.php start"
     ports:
       - "80:80"
+      - "81:81"
+      - "82:82"
+      - "83:83"
+      - "84:84"
     volumes:
       - ./:/workdir
